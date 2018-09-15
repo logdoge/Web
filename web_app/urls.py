@@ -1,5 +1,7 @@
+from web_app import views
 from django.conf.urls import include, url
 from django.contrib import admin
+
 
 urlpatterns = [
     # Examples:
@@ -7,6 +9,6 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^web/',include('web_app.urls')),
-    url(r'^polls/', include('polls.urls', namespace='polls')),
+    url(r'^$', views.index, name='index'),
+
 ]
